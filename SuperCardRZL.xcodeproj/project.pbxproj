@@ -18,6 +18,7 @@
 		5D52DBFF1776C6BF008C4D65 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D52DBFE1776C6BF008C4D65 /* Default-568h@2x.png */; };
 		5D52DC021776C6BF008C4D65 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D52DC001776C6BF008C4D65 /* MainStoryboard.storyboard */; };
 		5D52DC051776C6BF008C4D65 /* SuperCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D52DC041776C6BF008C4D65 /* SuperCardViewController.m */; };
+		5D52DC0D1776C732008C4D65 /* PlayingCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D52DC0C1776C732008C4D65 /* PlayingCardView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		5D52DC011776C6BF008C4D65 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		5D52DC031776C6BF008C4D65 /* SuperCardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperCardViewController.h; sourceTree = "<group>"; };
 		5D52DC041776C6BF008C4D65 /* SuperCardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuperCardViewController.m; sourceTree = "<group>"; };
+		5D52DC0B1776C732008C4D65 /* PlayingCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayingCardView.h; sourceTree = "<group>"; };
+		5D52DC0C1776C732008C4D65 /* PlayingCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayingCardView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,8 @@
 		5D52DBEE1776C6BF008C4D65 /* SuperCardRZL */ = {
 			isa = PBXGroup;
 			children = (
+				5D52DC0B1776C732008C4D65 /* PlayingCardView.h */,
+				5D52DC0C1776C732008C4D65 /* PlayingCardView.m */,
 				5D52DBF71776C6BF008C4D65 /* SuperCardAppDelegate.h */,
 				5D52DBF81776C6BF008C4D65 /* SuperCardAppDelegate.m */,
 				5D52DC001776C6BF008C4D65 /* MainStoryboard.storyboard */,
@@ -177,6 +182,7 @@
 				5D52DBF51776C6BF008C4D65 /* main.m in Sources */,
 				5D52DBF91776C6BF008C4D65 /* SuperCardAppDelegate.m in Sources */,
 				5D52DC051776C6BF008C4D65 /* SuperCardViewController.m in Sources */,
+				5D52DC0D1776C732008C4D65 /* PlayingCardView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

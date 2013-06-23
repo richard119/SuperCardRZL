@@ -7,23 +7,19 @@
 //
 
 #import "SuperCardViewController.h"
+#import "PlayingCardView.h"
 
 @interface SuperCardViewController ()
+@property (weak, nonatomic) IBOutlet PlayingCardView *playingCardview;
 
 @end
 
 @implementation SuperCardViewController
 
-- (void)viewDidLoad
+- (void)setPlayingCardview:(PlayingCardView *)playingCardview
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    _playingCardview = playingCardview;
+    playingCardview.rank = 13; //K
+    playingCardview.suit = @"♥";
 }
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 @end
