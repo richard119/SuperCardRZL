@@ -24,6 +24,28 @@
     [[UIColor blackColor] setStroke];
     [roundedRect stroke]; 
     
+    [self drawConers];
+}
+
+-(NSString *)rankAsString
+{
+    return @[@"?",@"A",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"J",@"Q",@"K"][self.rank];
+}
+
+-(void)drawConers
+{
+    NSMutableParagraphStyle *paragraph = [[NSMutableParagraphStyle alloc] init];
+    paragraph.alignment = NSTextAlignmentCenter;
+    
+    UIFont *cornerFont = [UIFont systemFontOfSize:self.bounds.size.width * 0.2];
+    
+    NSAttributedString *cornerText = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@\n%@",[self rankAsString],self.suit] attributes:@{NSParagraphStyleAttributeName: paragraph , NSFontAttributeName: cornerFont}];
+    
+    CGRect textBound;
+    textBound.origin = CGPointMake(2.0, 2.0);
+    textBound.size = [cornerText size];
+    
+    [cornerText drawInRect:textBound];
 }
 
 
