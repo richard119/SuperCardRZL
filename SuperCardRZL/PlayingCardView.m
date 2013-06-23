@@ -46,6 +46,24 @@
     textBound.size = [cornerText size];
     
     [cornerText drawInRect:textBound];
+    
+    [self pushContextRotateUpsideDown];
+    [cornerText drawInRect:textBound];
+    [self popContext];
+}
+
+-(void)pushContextRotateUpsideDown
+{
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSaveGState(context);
+    CGContextTranslateCTM(context, self.bounds.size.width, self.bounds.size.height);
+//   CGContextTranslateCTM(context, self.bounds.size.width/2, self.bounds.size.height/2);
+    CGContextRotateCTM(context, M_PI);
+}
+
+-(void)popContext
+{
+    CGContextRestoreGState(UIGraphicsGetCurrentContext());
 }
 
 
