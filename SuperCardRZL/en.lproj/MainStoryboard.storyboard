@@ -14,6 +14,10 @@
                         <subviews>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kQE-kH-tKB" customClass="PlayingCardView">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="e3Y-hW-3eo" appends="YES" id="XG2-rn-WDx"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -29,6 +33,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="e3Y-hW-3eo">
+                    <connections>
+                        <action selector="swipe:" destination="2" id="84U-5F-7Bk"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-145" y="23"/>
         </scene>
@@ -43,6 +52,7 @@
         <class className="SuperCardViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SuperCardViewController.h"/>
             <relationships>
+                <relationship kind="action" name="swipe:" candidateClass="UISwipeGestureRecognizer"/>
                 <relationship kind="outlet" name="playingCardview" candidateClass="PlayingCardView"/>
             </relationships>
         </class>

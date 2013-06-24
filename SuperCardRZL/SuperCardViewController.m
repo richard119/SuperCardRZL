@@ -22,4 +22,8 @@
     playingCardview.rank = 13; //K
     playingCardview.suit = @"♥";
 }
+
+- (IBAction)swipe:(UISwipeGestureRecognizer *)sender {
+    self.playingCardview.faceUp = !self.playingCardview.faceUp;
+}
 @end
