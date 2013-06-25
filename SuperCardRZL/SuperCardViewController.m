@@ -26,6 +26,12 @@
 }
 
 - (IBAction)swipe:(UISwipeGestureRecognizer *)sender {
-    self.playingCardview.faceUp = !self.playingCardview.faceUp;
+    [UIView transitionWithView:self.playingCardview duration:0.5
+                       options:UIViewAnimationOptionTransitionFlipFromLeft
+                       animations:^{
+                           self.playingCardview.faceUp = !self.playingCardview.faceUp;
+                       }completion:NULL];
+    
+//    self.playingCardview.faceUp = !self.playingCardview.faceUp;
 }
 @end
