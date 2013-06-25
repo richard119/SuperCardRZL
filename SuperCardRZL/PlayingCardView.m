@@ -104,6 +104,15 @@
 }
 
 
+-(void) pinch:(UIPinchGestureRecognizer *)gesture
+{
+    if ((gesture.state == UIGestureRecognizerStateChanged) ||
+        (gesture.state == UIGestureRecognizerStateEnded)){
+        self.faceCardScaleFactor *=gesture.scale;
+        gesture.scale = 1;
+    }
+}
+
 #pragma mark - Draw Image
 - (void)drawRect:(CGRect)rect
 {

@@ -21,6 +21,8 @@
     _playingCardview = playingCardview;
     playingCardview.rank = 13; //K
     playingCardview.suit = @"♥";
+    [playingCardview addGestureRecognizer:[[UIPinchGestureRecognizer alloc] initWithTarget:playingCardview action:@selector(pinch:)]];
+    
 }
 
 - (IBAction)swipe:(UISwipeGestureRecognizer *)sender {
